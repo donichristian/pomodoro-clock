@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    --color-dark: #222831;
+    --color-grey: #393E46;
+    --color-primary: #00ADB5;
+    --color-primary-hover: #40679E;
+    --color-white: #EEEEEE;
+    --color-white-hover: #D6DAC8;
+    --color-button: #1A5D1A;
+    --color-button-hover: #004225;
+    --color-red: #A0153E;
+    --color-red-hover: #FF204E;
+  }
+  
+  body {
+    background-color: var(--color-dark);
+    font-size: 36px;
+    color: var(--color-white);
+    font-family: "Fira Code", monospace;
+  }
+
+  .wrapper {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .wrapper h2 {
+    margin: 0;
+  }
+  
+  .wrapper > h2 {
+    margin: 15px;
+  }
+  
+  .break-session-length {
+      display: flex;
+      width: 700px;
+      justify-content: space-between;
+  }
+  
+  button {
+    border: none;
+    padding: 8px;
+    font-size: 28px;
+    border-radius: 4px;
+  }
+  
+  div > button {
+    color: white;
+    background-color: var(--color-primary);
+  }
+  
+  div > button:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  div button:nth-child(2) {
+    color: var(--color-white);
+    background-color: var(--color-button);
+  }
+  
+  div button:nth-child(2):hover {
+    background-color: var(--color-button-hover);
+  }
+  
+  strong {
+    margin: 0 8px;
+  }
+  
+  .timer {
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+    padding-top: 10px;
+  }
+  
+  .timer-wrapper > button {
+    margin-left: 10px
+  }
+  
+  #break-decrement, #session-decrement {
+    background-color: var(--color-red);
+  }
+  
+  #break-decrement:hover, #session-decrement:hover {
+    background-color: var(--color-red-hover);
+  }
+
+  /* Responsive style */
+  @media (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .break-session-length {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #break-label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #session-label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .timer {
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .timer-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-wrapper > button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+  }
